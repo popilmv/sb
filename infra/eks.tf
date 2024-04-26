@@ -111,28 +111,28 @@ eks_managed_node_groups = {
       }
     }
   }
-  # sb = {
-  #   name = "sb"
-  #   subnet_ids = ["subnet-0996ed421a40f5ac1", "subnet-0a3d2920160021d4f", "subnet-06ee7c62303152939", "subnet-044531a5881f70f69", "subnet-040cdd4fca46fec23", "subnet-0ef45c713081a7b70" ]
-  #   ami_type       = "AL2_x86_64"
-  #   instance_types = ["t2.micro"]
+  sb = {
+    name = "sb"
+    # subnet_ids = ["subnet-0996ed421a40f5ac1", "subnet-0a3d2920160021d4f", "subnet-06ee7c62303152939", "subnet-044531a5881f70f69", "subnet-040cdd4fca46fec23", "subnet-0ef45c713081a7b70" ]
+    ami_type       = "AL2_x86_64"
+    instance_types = ["t3.small"]
 
-  #   min_size     = 1
-  #   max_size     = 2
-  #   desired_size = 2
+    min_size     = 1
+    max_size     = 2
+    desired_size = 2
 
-  #   block_device_mappings = {
-  #     xvda = {
-  #       device_name = "/dev/xvda"
-  #       ebs         = {
-  #         volume_size           = 10
-  #         volume_type           = "gp3"
-  #         encrypted             = true
-  #         delete_on_termination = true
-  #       }
-  #     }
-  #   }
-  # }
+    block_device_mappings = {
+      xvda = {
+        device_name = "/dev/xvda"
+        ebs         = {
+          volume_size           = 10
+          volume_type           = "gp3"
+          encrypted             = true
+          delete_on_termination = true
+        }
+      }
+    }
+  }
 }
 }
 # data "aws_eks_cluster" "default" {
