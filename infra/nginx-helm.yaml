@@ -22,8 +22,8 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: ingress-nginx
-      version: '4.8.1'
+      chart: nginx
+      version: '16.0.6'
       sourceRef:
         kind: HelmRepository
         name: bitnami
